@@ -92,6 +92,10 @@ footer > .container {
   border-radius: 10px;
   filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
   padding: 30px;
+  transition: 0.3s;
+}
+.card-block:hover {
+  transform: scale(1.1);
 }
 .card-block-hidden {
   opacity: 0;
