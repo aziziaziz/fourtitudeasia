@@ -1,7 +1,13 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
 header, footer, main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+main {
+  flex-direction: column;
 }
 header, footer {
   height: 50px;
@@ -18,6 +24,29 @@ footer > .container {
   align-items: center;
   height: 100%;
 }
+.main-section {
+  padding: 60px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-section:nth-child(odd) {
+  background-color: #F0F0F0;
+}
+.main-section > .container {
+  flex-direction: column;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.section-caption {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 56px;
+  text-align: center;
+}
 .logo {
   height: 20px;
 }
@@ -32,7 +61,6 @@ footer > .container {
   white-space: nowrap;
   font-size: 14px;
   margin-left: 30px;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
