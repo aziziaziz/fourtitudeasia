@@ -28,4 +28,17 @@
   border-radius: 10px;
   pointer-events: none;
   padding: 19.5px;
+  transition: 0.3s;
+}
+.custom-placeholder-focus {
+  text-shadow: -1px -1px white,
+    0px -1px white,
+    1px -1px white,
+    1px 0px white,
+    1px 1px white,
+    0px 1px white,
+    -1px 1px white;
+  padding: 0 19.5px;
+  height: fit-content;
+  top: -9px;
 }
