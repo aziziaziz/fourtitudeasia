@@ -8,11 +8,24 @@
     <link href="css/normalize.min.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
 
+    <script src="js/customInput.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- Template for custom input -->
+    <template id="custom-input-template">
+      <link rel="stylesheet" href="css/customInput.css" type="text/css">
+
+      <div id="custom-input-container" class="custom-input-container">
+        <input id="custom-input-element" class="custom-input" type="text">
+        <div id="custom-placeholder-element" class="custom-placeholder">Custom Placeholder</div>
+      </div>
+    </template>
+    <!-- Template for custom input -->
+
     <header>
       <div class="container">
         <img class="logo" src="images/logo.png" alt="">
@@ -94,6 +107,12 @@
         <div class="container">
           <div class="section-title">Connect</div>
           <div class="section-caption">Every successful connection starts in conversation. Drop us a line today :)</div>
+
+          <div class="connect-details">
+            <custom-input placeholder="Name"></custom-input>
+            <custom-input placeholder="Email address"></custom-input>
+            <custom-input placeholder="Contact no."></custom-input>
+          </div>
         </div>
       </div>
     </main>

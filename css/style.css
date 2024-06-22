@@ -73,6 +73,16 @@ footer > .container {
 .navigator:hover {
   text-decoration: underline;
 }
+custom-input {
+  width: 100%;
+}
+custom-input:not(:first-child) {
+  margin-left: 30px;
+}
+.connect-details {
+  display: flex;
+  width: 100%;
+}
 
 /* Card Section */
 .cards-section {
