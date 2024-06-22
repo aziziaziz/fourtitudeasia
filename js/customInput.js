@@ -27,6 +27,9 @@ class customInput extends HTMLElement {
     let placeholder = this.getAttribute('placeholder');
     this.placeholderEl.innerHTML = placeholder || 'Placeholder not set';
 
+    let elKey = this.getAttribute('key');
+    this.elementKey = elKey || '';
+
     this.inputEl.addEventListener('focus', (e) => {
       if (!Array.from(this.placeholderEl.classList).includes('custom-placeholder-focus')) {
         this.placeholderEl.classList.add('custom-placeholder-focus');
@@ -40,11 +43,12 @@ class customInput extends HTMLElement {
     this.inputEl.addEventListener('input', (e) => {
       let event = new CustomEvent('customInputChanged', {
         detail: {
-          value: e.target.value
+          value: e.target.value,
+          key: this.elementKey
         },
         composed: true,
         bubbles: true
-      })
+      });
 
       this.dispatchEvent(event);
     });
