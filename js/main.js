@@ -37,9 +37,20 @@ function clearClicked() {
 }
 
 function connectClicked() {
-  alert('Thank you! We will get in touch with you as soon as possible.');
-
-  clearClicked();
+  let verifyEmail = connectObj.address.match(/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/g);
+  let verifyContact = connectObj.contact.match(/^\+?[0-9()-]{7,20}$/g)
+  if (verifyEmail && verifyContact) {
+    alert('Thank you! We will get in touch with you as soon as possible.');
+    clearClicked();
+  } else {
+    if (!verifyEmail && !verifyContact) {
+      alert('Please provide a valid email address and phone number.')
+    } else if (!verifyEmail) {
+      alert('Please provide a valid email address.');
+    } else if (!verifyContact) {
+      alert('Please proved a valid phone number.');
+    }
+  }
 }
 
 function connectButtonEnabled(enable) {
