@@ -27,6 +27,17 @@
     </template>
     <!-- Template for custom input -->
 
+    <!-- Template for custom input (multiline/textarea) -->
+    <template id="custom-textarea-template">
+      <link rel="stylesheet" href="css/customInput.css" type="text/css">
+
+      <div id="custom-input-container" class="custom-input-container">
+        <textarea id="custom-input-element" class="custom-input custom-textarea"></textarea>
+        <div id="custom-placeholder-element" class="custom-placeholder custom-placeholder-textarea">Custom Placeholder</div>
+      </div>
+    </template>
+    <!-- Template for custom input (multiline/textarea) -->
+
     <header>
       <div class="container">
         <img class="logo" src="images/logo.png" alt="">
@@ -113,6 +124,9 @@
             <custom-input placeholder="Name" key="name"></custom-input>
             <custom-input placeholder="Email address" key="address"></custom-input>
             <custom-input placeholder="Contact no." key="contact"></custom-input>
+          </div>
+          <div class="connect-details connect-details-bottom">
+            <custom-input placeholder="How can we help?" key="details" multiline="true"></custom-input>
           </div>
         </div>
       </div>

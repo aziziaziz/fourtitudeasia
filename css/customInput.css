@@ -43,3 +43,10 @@
   top: -9px;
   font-size: 14px;
 }
+.custom-textarea {
+  height: 150px;
+  resize: none;
+}
+.custom-placeholder-textarea {
+  height: fit-content;
+}

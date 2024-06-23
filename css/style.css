@@ -83,6 +83,9 @@ custom-input:not(:first-child) {
   display: flex;
   width: 100%;
 }
+.connect-details-bottom {
+  margin-top: 30px;
+}
 
 /* Card Section */
 .cards-section {
