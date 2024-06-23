@@ -163,4 +163,8 @@ button:active {
   color: white;
   border: none;
 }
+.button-connect:disabled {
+  background-color: rgba(15,74,178,0.5);
+  pointer-events: none;
+}
 /* Button Section */

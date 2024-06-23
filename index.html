@@ -121,17 +121,17 @@
           <div class="section-caption">Every successful connection starts in conversation. Drop us a line today :)</div>
 
           <div class="connect-details">
-            <custom-input placeholder="Name" key="name"></custom-input>
-            <custom-input placeholder="Email address" key="address"></custom-input>
-            <custom-input placeholder="Contact no." key="contact"></custom-input>
+            <custom-input id="connect-name" placeholder="Name" key="name"></custom-input>
+            <custom-input id="connect-address" placeholder="Email address" key="address"></custom-input>
+            <custom-input id="connect-contact" placeholder="Contact no." key="contact"></custom-input>
           </div>
           <div class="connect-details connect-details-bottom">
-            <custom-input placeholder="How can we help?" key="details" multiline="true"></custom-input>
+            <custom-input id="connect-details" placeholder="How can we help?" key="details" multiline="true"></custom-input>
           </div>
 
           <div class="button-section">
-            <button class="button-clear">Clear</button>
-            <button class="button-connect">Connect with us</button>
+            <button class="button-clear" onclick="clearClicked()">Clear</button>
+            <button id="button-connect" class="button-connect" onclick="connectClicked()">Connect with us</button>
           </div>
         </div>
       </div>

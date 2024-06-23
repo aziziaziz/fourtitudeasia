@@ -6,17 +6,6 @@ class customInput extends HTMLElement {
   }
 
   connectedCallback() {
-    // if (!this.inputEl || !this.placeholderEl) {
-    //   console.error('Failed to find input or placeholder');
-    //   if (this.placeholderEl) {
-    //     this.placeholderEl.innerHTML = 'Failed to load';
-    //   }
-    //   if (this.inputEl) {
-    //     this.inputEl.setAttribute('disabled', 'true');
-    //   }
-    //   return;
-    // }
-
     let multiline = this.getAttribute('multiline');
     this.isMultiLine = multiline == 'true';
     
@@ -26,9 +15,6 @@ class customInput extends HTMLElement {
     } else {
       template = document.getElementById('custom-input-template').content;
     }
-
-    console.log(this.isMultiLine);
-    console.log(template);
 
     let templateClone = template.cloneNode(true);
 
@@ -69,8 +55,16 @@ class customInput extends HTMLElement {
       this.dispatchEvent(event);
     });
     //#endregion Events
-
   }
+
+  //#region Methods
+  clear() {
+    this.inputEl.value = '';
+    if (Array.from(this.placeholderEl.classList).includes('custom-placeholder-focus')) {
+      this.placeholderEl.classList.remove('custom-placeholder-focus');
+    }
+  }
+  //#endregion Methods
 }
 
 customElements.define('custom-input', customInput);
