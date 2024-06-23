@@ -44,19 +44,23 @@
         <img class="logo-name" src="images/logo-name.png" alt="">
         <div class="flex-spacer"></div>
         
+        <!-- Navigator for non mobile -->
         <div class="header-footer-text navigator desktop-nav" onclick="scrollToView('dev-section')">Development & Integration</div>
         <div class="header-footer-text navigator desktop-nav" onclick="scrollToView('uiux-section')">UI & UX Design</div>
         <div class="header-footer-text navigator desktop-nav" onclick="scrollToView('connect-section')">Connect</div>
+        <!-- Navigator for non mobile -->
         
         <img id="mobile-burger" class="mobile-burger" src="images/mobile-burger.png" onclick="showHideMobileMenuClicked()" alt="">
         <img id="mobile-burger-close" class="mobile-burger-close mobile-menu-hide" onclick="showHideMobileMenuClicked()" src="images/mobile-nav-close.png" alt="">
         
         <div class="navigator-background"></div>
+        <!-- Area for mobile navigator -->
         <div id="mobile-navigator" class="mobile-navigator-container mobile-navigator-hide">
           <div class="header-footer-text navigator" onclick="scrollToView('dev-section', true)">Development & Integration</div>
           <div class="header-footer-text navigator" onclick="scrollToView('uiux-section', true)">UI & UX Design</div>
           <div class="header-footer-text navigator" onclick="scrollToView('connect-section', true)">Connect</div>
         </div>
+        <!-- Area for mobile navigator -->
       </div>
     </header>
     <main>
