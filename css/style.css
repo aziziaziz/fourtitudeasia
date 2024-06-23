@@ -135,3 +135,32 @@ custom-input:not(:first-child) {
   font-size: 16px;
 }
 /* Card Section */
+
+/* Button Section */
+.button-section {
+  margin-top: 45px;
+}
+.button-section > button:last-child {
+  margin-left: 30px;
+}
+button {
+  height: 62px;
+  width: 190px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+button:active {
+  transform: scale(0.9);
+}
+.button-clear {
+  color: #0F4AB2;
+  border: 2px solid #0F4AB2;
+}
+.button-connect {
+  background-color: rgba(15,74,178,1);
+  color: white;
+  border: none;
+}
+/* Button Section */
