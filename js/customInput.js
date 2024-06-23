@@ -29,6 +29,9 @@ class customInput extends HTMLElement {
 
     let elKey = this.getAttribute('key');
     this.elementKey = elKey || '';
+
+    let elType = this.getAttribute('type');
+    this.inputEl.setAttribute('type', elType || 'text');
     //#endregion Attributes
 
     //#region Events
@@ -43,9 +46,18 @@ class customInput extends HTMLElement {
       }
     });
     this.inputEl.addEventListener('input', (e) => {
+      let value = e.target.value;
+
+      if (elType == 'tel') {
+        let match = value.match(/(\d)|\+/g);
+        value = match ? match.join('') : '';
+      }
+
+      this.inputEl.value = value;
+
       let event = new CustomEvent('customInputChanged', {
         detail: {
-          value: e.target.value,
+          value: value,
           key: this.elementKey
         },
         composed: true,
