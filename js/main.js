@@ -37,7 +37,9 @@ function clearClicked() {
 }
 
 function connectClicked() {
-  
+  alert('Thank you! We will get in touch with you as soon as possible.');
+
+  clearClicked();
 }
 
 function connectButtonEnabled(enable) {
