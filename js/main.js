@@ -33,6 +33,13 @@ function clearClicked() {
   contact.clear();
   details.clear();
 
+  connectObj = {
+    name: '',
+    address: '',
+    contact: '',
+    details: ''
+  };
+
   connectButtonEnabled(false);
 }
 
