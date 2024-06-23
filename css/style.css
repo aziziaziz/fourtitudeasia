@@ -12,6 +12,11 @@ header, footer, main {
 main {
   flex-direction: column;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 11;
+}
 header, footer {
   height: 50px;
   background-color: #333333;
@@ -73,6 +78,11 @@ footer > .container {
 .navigator:hover {
   text-decoration: underline;
 }
+.mobile-burger {
+  display: none;
+  height: 12px;
+  cursor: pointer;
+}
 custom-input {
   width: 100%;
 }
@@ -99,8 +109,7 @@ custom-input:not(:first-child) {
 .card-block {
   width: 100%;
   max-width: 380px;
-  /* height: 342px;
-  max-height: 342px; */
+  min-width: 335px;
   background-color: #FFFFFF;
   border-radius: 10px;
   filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
@@ -168,3 +177,64 @@ button:active {
   pointer-events: none;
 }
 /* Button Section */
+
+@media only screen and (max-width: 1200px) {
+  header, footer {
+    padding: 0 20px;
+  }
+  .main-section {
+    padding: 60px 20px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  footer > .container {
+    justify-content: center;
+  }
+  .header-footer-text {
+    margin-left: 0;
+  }
+  .main-section {
+    padding: 30px 20px;
+  }
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .section-caption {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .cards-section {
+    row-gap: 22px;
+  }
+  .card-large-title {
+    font-size: 16px;
+  }
+  .card-details {
+    font-size: 14px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-burger {
+    display: block;
+  }
+  button {
+    width: 155px;
+    font-size: 16px;
+  }
+  .connect-details {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .connect-details-bottom {
+    margin-top: 15px;
+  }
+  custom-input:not(:first-child) {
+    margin-left: 0;
+  }
+  .button-section {
+    margin-top: 30px;
+  }
+}

@@ -53,3 +53,16 @@ input:hover, textarea:hover {
 .custom-placeholder-textarea {
   height: fit-content;
 }
+
+@media only screen and (max-width: 850px) {
+  .custom-input {
+    padding: 15px;
+  }
+  .custom-placeholder-focus {
+    top: -7px;
+    font-size: 12px;
+  }
+  .custom-placeholder {
+    font-size: 14px;
+  }
+}
