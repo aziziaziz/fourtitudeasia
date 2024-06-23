@@ -44,15 +44,23 @@
         <img class="logo-name" src="images/logo-name.png" alt="">
         <div class="flex-spacer"></div>
         
-        <div class="header-footer-text navigator desktop-nav">Development & Integration</div>
-        <div class="header-footer-text navigator desktop-nav">UI & UX Design</div>
-        <div class="header-footer-text navigator desktop-nav">Connect</div>
-
-        <img class="mobile-burger" src="images/mobile-burger.png" alt="">
+        <div class="header-footer-text navigator desktop-nav" onclick="scrollToView('dev-section')">Development & Integration</div>
+        <div class="header-footer-text navigator desktop-nav" onclick="scrollToView('uiux-section')">UI & UX Design</div>
+        <div class="header-footer-text navigator desktop-nav" onclick="scrollToView('connect-section')">Connect</div>
+        
+        <img id="mobile-burger" class="mobile-burger" src="images/mobile-burger.png" onclick="showHideMobileMenuClicked()" alt="">
+        <img id="mobile-burger-close" class="mobile-burger-close mobile-menu-hide" onclick="showHideMobileMenuClicked()" src="images/mobile-nav-close.png" alt="">
+        
+        <div class="navigator-background"></div>
+        <div id="mobile-navigator" class="mobile-navigator-container mobile-navigator-hide">
+          <div class="header-footer-text navigator" onclick="scrollToView('dev-section', true)">Development & Integration</div>
+          <div class="header-footer-text navigator" onclick="scrollToView('uiux-section', true)">UI & UX Design</div>
+          <div class="header-footer-text navigator" onclick="scrollToView('connect-section', true)">Connect</div>
+        </div>
       </div>
     </header>
     <main>
-      <div class="main-section">
+      <div id="dev-section" class="main-section">
         <div class="container">
           <div class="section-title">Development & Integration</div>
           <div class="section-caption">Our development and integration services cater to organisations looking at digital transformation and Industry 4.0.<br>Let’s work together to realise your business goals today.</div>
@@ -91,7 +99,7 @@
           </div>
         </div>
       </div>
-      <div class="main-section">
+      <div id="uiux-section" class="main-section">
         <div class="container">
           <div class="section-title">UI & UX Design</div>
           <div class="section-caption">We bring value to your business by producing seamless, multi-platform digital experiences that result in strong,<br>meaningful user engagements. Read more about our services below.</div>
@@ -118,7 +126,7 @@
           </div>
         </div>
       </div>
-      <div class="main-section">
+      <div id="connect-section" class="main-section">
         <div class="container">
           <div class="section-title">Connect</div>
           <div class="section-caption">Every successful connection starts in conversation. Drop us a line today :)</div>

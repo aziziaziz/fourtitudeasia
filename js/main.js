@@ -4,6 +4,7 @@ let connectObj = {
   contact: '',
   details: ''
 };
+let mobileMenuShow = false;
 
 document.addEventListener('DOMContentLoaded', () => {
   connectButtonEnabled(false);
@@ -67,4 +68,40 @@ function connectButtonEnabled(enable) {
   } else {
     connectButton.setAttribute('disabled', true);
   }
+}
+
+function showHideMobileMenuClicked(close) {
+  let mobileBurger = document.getElementById('mobile-burger');
+  let mobileBurgerClose = document.getElementById('mobile-burger-close');
+  let navigator = document.getElementById('mobile-navigator');
+
+  if (close) {
+    mobileMenuShow = false;
+  } else {
+    mobileMenuShow = !mobileMenuShow;
+  }
+
+  if (mobileMenuShow) {
+    mobileBurger.classList.add('mobile-menu-hide');
+    mobileBurgerClose.classList.remove('mobile-menu-hide');
+
+    navigator.classList.add('mobile-navigator-show');
+    navigator.classList.remove('mobile-navigator-hide');
+  } else {
+    mobileBurger.classList.remove('mobile-menu-hide');
+    mobileBurgerClose.classList.add('mobile-menu-hide');
+
+    navigator.classList.add('mobile-navigator-hide');
+    navigator.classList.remove('mobile-navigator-show');
+  }
+}
+
+function scrollToView(id, isMobile) {
+  let el = document.getElementById(id);
+  window.scrollTo({
+    top: el.offsetTop - (isMobile ? 45 : 60),
+    behavior: 'smooth'
+  });
+
+  showHideMobileMenuClicked(true);
 }
